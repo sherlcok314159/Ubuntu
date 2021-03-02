@@ -80,7 +80,9 @@ sudo vim ~/.bashrc
 ~指的是root文件夹下的
 ```
 export CUDA_HOME=/usr/local/cuda
+
 export PATH=$PATH:$CUDA_HOME/bin
+
 export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
 把上述内容插入（按i）到最后，然后按Esc，打":wq!"（该操作的意思是强制保存并退出），**注意":"一定一定不能忘记**。另外，**不同版本cuda不一样**，不能照抄，还有**路径之间不要留空格**
