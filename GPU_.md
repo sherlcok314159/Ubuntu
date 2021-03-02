@@ -178,7 +178,15 @@ conda env list #看看自己的虚拟环境
 source activate tf #转到tf环境，如果早已建好了
 ```
 
-在终端里面输入，一般环境激活即可，不用上面那样
+当然了如果是VScode，首先创建一个文件夹，用作工作区，工作区与用户端的语言等等环境可以不一样，与anaconda不谋而合，然后打开工作区，点击工作台，找到设置文件settings.json，再改掉pythonpath
+
+```json
+"python.pythonPath": "home/tony/anaconda3/envs/${env:CONDA_DEFAULT_ENV}/bin/python"
+```
+保存设置，终端找环境就如上面一样，激活后点击右下角的编译器提示，然后选择编译器
+
+
+在终端里面输入，一般环境激活base即可，不用上面那样
 
 ```python
 import tensorflow as tf
