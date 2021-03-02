@@ -191,4 +191,17 @@ sess=tf.Session(config=tf.ConfigProto(log_device_placement=True))
 
 截取部分如上
 
+遇到可能问题以及解决方案。
+
+如果一开始安装了驱动程序，卸载
+```bash
+sudo apt-get remove purge nvidia-*
+```
+
+如果安装错了或者删不干净等等，最好的办法（相信我！）直接重装系统吧，重启进入Windows Boot Manager。然后把一开始的分区删掉，千万不要怕麻烦，本人奋战一个星期，系统重装5，6次。
+
+如果发现装好Ubuntu系统发现每次都是Windows启动，不停按F12，选择Ubuntu，然后Ubuntu下选择最后一个，进入**BIOS**，设置开机顺序
+
+![](https://github.com/sherlcok314159/Ubuntu/blob/main/Images/bios.jpg)
+
 >Say byebye to windows and welcome Ubuntu!

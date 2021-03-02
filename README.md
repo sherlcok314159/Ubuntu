@@ -10,6 +10,8 @@
 
 ***
 
-[深度学习环境配置](environment/GPU_.md)
+[深度学习环境配置](GPU_.md)
 
 如果你要从事ML，那么GPU加速是很需要的，需要配置好GPU环境
+
+[常用命令](commands.md)
