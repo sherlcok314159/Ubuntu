@@ -38,6 +38,8 @@ sudo apt-get install gcc make cmake #安装装环境时需要的编辑器
 
 装这个之前需要确定好版本，注意与tensorflow,cuda,cudnn这三者之间的对应关系，如下图
 
+![](https://github.com/sherlcok314159/Ubuntu/blob/main/Images/version.png)
+
 
 我选择的是run文件
 
@@ -77,10 +79,12 @@ sudo vim ~/.bashrc
 #修改cuda路径
 ~指的是root文件夹下的
 ```
+export CUDA_HOME=/usr/local/cuda
+export PATH=$PATH:$CUDA_HOME/bin
+export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
-把上述内容插入（按i）到最后，然后按Esc，打":wq!"，**注意":"一定一定不能忘记**
+把上述内容插入（按i）到最后，然后按Esc，打":wq!"（该操作的意思是强制保存并退出），**注意":"一定一定不能忘记**。另外，**不同版本cuda不一样**，不能照抄，还有**路径之间不要留空格**
 
-该操作的意思是强制保存并退出
 
 ```bash
 sudo source ~/.bashrc #进行更新
@@ -93,6 +97,92 @@ sudo reboot #重启
 sudo nvcc -V
 ```
 
-
+![](https://github.com/sherlcok314159/Ubuntu/blob/main/Images/nvcc.png)
 
 应该出现像上面一样反映出你CUDA的版本号
+
+
+**D.cudnn安装**
+
+按照**对应**的版本去官网下载，注意，需要下**3个deb**文件。
+
+![](https://github.com/sherlcok314159/Ubuntu/blob/main/Images/cudnn.png)
+
+下载好之后，举例来讲
+
+```bash
+dpkg -i 文件路径
+
+#按照上图的顺序来安装，不要搞乱，第二个应该是文件名里带dev的，第三个文件名带doc
+```
+
+检验
+
+```bash
+cp -r /usr/src/cudnn_samples_v8/home/cudnntest
+cd /home/cudnntest/cudnn_samples_v8/mnistCUDNN
+make make
+/.mnistCUDNN
+```
+注意，不同版本不同，会导致cudnn_samples_v后面的数字不同，建议仔细查看一下
+
+如果没问题的话，最后一行应该是如下所示：
+
+>Test Passed!
+
+然后接下来安装anaconda，dpkg命令即可，只是**别忘了添加到系统变量**
+
+按照pip
+
+```bash
+sudo apt-get install python3-pip
+#注意，如果只是python，会是python2的pip
+```
+
+到root文件下创立“.pip”文件夹，然后把pip.conf放进去，里面设置pip从清华的镜像站下载第三方包
+
+![](https://github.com/sherlcok314159/Ubuntu/blob/main/Images/root.png)
+
+点击其他位置，点击计算机，里面有root。
+
+另外，Ubuntu是可以访问Windows系统的文件的，但是**没有更改的权限**。
+
+打开终端，输入
+
+```bash
+若为tensorflow2.x版本
+pip3 install tensorflow==2.x
+若为tensorflow1.x版本，可能找不到，需要提前下好轮子
+pip3 install 轮子文件
+```
+
+我强烈建议安装Vscode，宇宙最强编辑器，里面打开拓展，安装python扩展和中文包，dpkg开头为code的deb文件即可
+
+若你不喜欢，那就打开终端
+
+```bash
+source activate #激活anaconda基本环境
+python #唤醒python
+接下来跟你打开python自带的IDLE一个模样
+conda list #查看该环境包的版本
+source deactivate #退出环境
+```
+当然，日后不同的环境不能混起来，可以用conda创建虚拟环境
+
+```python
+conda create -n learn python=3.8
+#创建了一个名为learn的python3.8包
+```
+
+在终端里面输入，一般环境激活即可，不用上面那样
+
+```python
+import tensorflow as tf
+sess=tf.Session(config=tf.ConfigProto(log_device_placement=True))
+```
+
+你可以看终端，应该是可以看到发现GPU设备的
+
+![](https://github.com/sherlcok314159/Ubuntu/blob/main/Images/GPU_DEVICE.png)
+
+截取部分如上
