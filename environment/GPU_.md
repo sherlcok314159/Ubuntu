@@ -14,7 +14,7 @@
 
 首先，打开**软件和更新**（点击左下角，里面找），打开之后，当前页面有 **下载自**，这里切换到阿里的镜像*http://mirrors.aliyun.com/ubuntu*，因为接下来需要下载很多东西，切换国内的镜像就像你用pip的道理是一样的，会提升速度
 
-![](https://github.com/sherlcok314159/Ubuntu/blob/main/Images/software_and_update.jpg)
+![](https://github.com/sherlcok314159/Ubuntu/blob/main/Images/software_and_update.png)
 
 接下来Ctrl+Alt+T打开终端输入以下命令
 ```bash
