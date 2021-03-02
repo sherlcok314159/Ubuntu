@@ -14,7 +14,7 @@
 
 首先，打开**软件和更新**（点击左下角，里面找），打开之后，当前页面有 **下载自**，这里切换到阿里的镜像*http://mirrors.aliyun.com/ubuntu*，因为接下来需要下载很多东西，切换国内的镜像就像你用pip的道理是一样的，会提升速度
 
-![](https://github.com/sherlcok314159/Ubuntu/blob/main/Images/software and update.jpg)
+![](https://github.com/sherlcok314159/Ubuntu/blob/main/Images/software_and_update.jpg)
 
 接下来Ctrl+Alt+T打开终端输入以下命令
 ```bash
@@ -29,7 +29,7 @@ sudo apt-get install gcc make cmake #安装装环境时需要的编辑器
 
 打开软件和更新，打开驱动程序，选择系统推荐的驱动程序，我的是Win10 联想拯救者LegionY7000，GTX1650，官网上查驱动程序其实是不支持nvidia-driver-460，但我装了之后跑没问题。你选择上面推荐的驱动程序，然后**点击应用更改**，大概需要1，2分钟的样子。
 
-![](https://github.com/sherlcok314159/Ubuntu/blob/main/Images/driver.jpg)
+![](https://github.com/sherlcok314159/Ubuntu/blob/main/Images/driver.png)
 
 然后命令行打开输入reboot，进行重启，在终端输入nvidia-smi，如果你的驱动装好了，应该是以下的样子
 
@@ -92,5 +92,7 @@ sudo reboot #重启
 ```bash
 sudo nvcc -V
 ```
+
+
 
 应该出现像上面一样反映出你CUDA的版本号
