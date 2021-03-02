@@ -190,3 +190,5 @@ sess=tf.Session(config=tf.ConfigProto(log_device_placement=True))
 ![](https://github.com/sherlcok314159/Ubuntu/blob/main/Images/GPU_DEVICE.png)
 
 截取部分如上
+
+>Say byebye to windows and welcome Ubuntu!
