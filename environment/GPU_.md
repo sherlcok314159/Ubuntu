@@ -173,7 +173,9 @@ source deactivate #退出环境
 
 ```python
 conda create -n learn python=3.8
-#创建了一个名为learn的python3.8包
+#创建了一个名为learn的环境，里面包含python3.8包
+conda env list #看看自己的虚拟环境
+source activate tf #转到tf环境，如果早已建好了
 ```
 
 在终端里面输入，一般环境激活即可，不用上面那样
