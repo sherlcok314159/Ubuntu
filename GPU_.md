@@ -200,6 +200,28 @@ sess=tf.Session(config=tf.ConfigProto(log_device_placement=True))
 
 截取部分如上
 
+以上是tensorflow下环境配置，cuda,cudnn都是通用的，接下来配置pytorch
+
+```bash
+conda install pytorch==1.0.0 torchvision==0.2.1 cuda100 -c pytorch
+```
+
+这个得跟你cuda版本一致才行
+
+测试是否成功
+
+```python
+import torch   # 能否调用pytorch库
+
+print(torch.cuda.current_device())   # 输出当前设备（我只有一个GPU为0）
+print(torch.cuda.device(0))   # <torch.cuda.device object at 0x7fdfb60aa588>
+print(torch.cuda.device_count())  # 输出含有的GPU数目
+print(torch.cuda.get_device_name(0))  # 输出GPU名称 --比如1080Ti
+x = torch.rand(5, 3)
+print(x)  # 输出一个5 x 3 的tenor(张量)
+```
+
+
 遇到可能问题以及解决方案。
 
 如果一开始安装了驱动程序，卸载
