@@ -31,3 +31,18 @@ https://sunlogin.oray.com/download/ 下载
 sudo apt-get install lightdm
 ```
 
+- Anaconda
+
+若出现CondaHTTPError: HTTP 000 CONNECTION FAILED for url ＜https://mirrors.tuna.tsinghua.edu.cn/anaconda/
+
+或者是下载速度过慢，添加中科大源
+
+```bash
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/
+conda config --set show_channel_urls yes
+```
+
+将其他以及default删去
+```bash
+vim ~/.condarc
+```
