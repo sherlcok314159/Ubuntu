@@ -1,6 +1,6 @@
 - Wechat
 
-将 https://github.com/zq1997/deepin-wine 压缩包下载至本地，然后解压终端打开，运行`install.sh`，完成wine的安装
+将 https://github.com/wszqkzqk/deepin-wine-ubuntu 压缩包下载至本地，然后解压终端打开，运行`install.sh`，完成wine的安装
 
 继续上面的网站，往下拉找到微信并手动下载`.deb`安装包，建议下可以解决依赖错误的那个
 
