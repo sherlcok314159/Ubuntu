@@ -18,3 +18,16 @@ WINE_CMD="LC_ALL=zh_CN.UTF-8 deepin-wine"
 ```bash
 sudo apt install libjpeg62:i386
 ```
+
+- 向日葵
+
+https://sunlogin.oray.com/download/ 下载
+
+如果连接一瞬间就断开，被控机是ubuntu，可以从以下两点解决：
+
+1. 终端输入`xhost+`确定连接没有被限制
+2. 切换桌面显示器
+```bash
+sudo apt-get install lightdm
+```
+
