@@ -46,3 +46,8 @@ conda config --set show_channel_urls yes
 ```bash
 vim ~/.condarc
 ```
+
+- python 3.8 装tf 1.4
+```bash
+pip install --upgrade https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.14.0-py3-none-any.whl 
+```
