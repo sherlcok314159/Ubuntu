@@ -51,3 +51,12 @@ vim ~/.condarc
 ```bash
 pip install --upgrade https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.14.0-py3-none-any.whl 
 ```
+
+- 设置打不开
+
+源须为主站
+
+```python
+sudo apt-get update
+sudo apt-get install --reinstall gnome-control-center
+```
